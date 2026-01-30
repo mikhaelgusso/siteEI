@@ -5,6 +5,8 @@ body {
    
 }
 
+
+
 h2 {
     font-family: "Inter", sans-serif;
     font-size: 48px;
@@ -115,4 +117,81 @@ body.no-scroll {
 
 canvas:focus-visible {
   outline: none;
+}
+
+
+
+
+* {text-decoration: none;
+  transition: all 0.3s;
+  transform: all 0.3s;
+
+}
+
+li {list-style: none;}
+
+
+.menuH {
+  display: inline-block;
+  position: relative;
+
+  .btn2 {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    border-width: 0px;
+    
+    
+    .bar {
+      width: 30px;
+      height: 5px;
+      background: #000;
+      border-radius: 2em;
+      margin-bottom: 5px;
+    }
+    .bar:last-child {margin-bottom: 0px;}
+    
+  }
+  
+  nav {
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    padding: 10px;
+    background-color: #ADDDC1;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+    
+    a.ham {
+      color: #222;
+      padding: 10px 20px;
+      display: block;
+      white-space: nowrap;
+    }
+    li:last-child a.ham {border-bottom: 0px;}
+    a.ham:hover {color: whitesmoke; background: #1E5E39;}
+  }
+  
+  .menu_show {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    
+  }
+}
+
+.carousel {
+    overflow-x: scroll;
+    cursor: grab;
+    touch-action: pan-y;
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE / Edge */
+}
+.carousel::-webkit-scrollbar {
+    display: none;               /* Chrome / Safari */
+}
+
+.carousel:active {
+    cursor: grabbing;
 }

@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const buttonModal5 = document.getElementById("buttonModal5");
   const buttonModal6 = document.getElementById("buttonModal6");
 
+  const botaoMenuH = document.getElementsByClassName("btn2")[0];
+  const hamburguer = document.getElementById("nav");
+
+
   const arrMod = [];
   const arrFecho = [];
   const fecho = document.getElementsByClassName("close");
@@ -115,6 +119,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   botaoRetornaPag.addEventListener("click", voltaPagina);
   botaoAvancaPag.addEventListener("click", avancaPagina);
+
+
+botaoMenuH.addEventListener("click", function(){
+
+hamburguer.classList.toggle("menu_show");
+
+});
+
 
 
 

@@ -39,6 +39,35 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let posicaoAtual4 = [0];
 
 
+
+let isDragStart = false, prevPageX, prevScrollLeft;
+
+const dragStart = (e) => {
+        isDragStart = true;
+    prevPageX = e.pageX || e.touches[0].pageX;
+    
+    prevScrollLeft = divImagem.scrollLeft;
+};
+
+const dragging = (e) => {
+    if(!isDragStart) return;
+    e.preventDefault();
+    let positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+    divImagem.scrollLeft = prevScrollLeft - positionDiff;
+
+};
+
+const dragStop = () =>{
+    isDragStart = false;
+};
+
+divImagem.addEventListener("touchstart", dragStart);
+divImagem.addEventListener("touchmove", dragging, { passive: false });
+divImagem.addEventListener("touchend", dragStop);
+
+
+
+
     botaoVolta.hidden = true;
     botaoVolta2.hidden = true;
     botaoVolta3.hidden = true;

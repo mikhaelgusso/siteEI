@@ -614,3 +614,24 @@ Table of Contents
 		font-size: 90%;
 	}
 }
+
+@media screen and (max-width: 720px) {
+
+.book {
+	position: relative;
+	width: 250px;
+	height: 150px;
+	-webkit-perspective: 2500px;
+	-moz-perspective: 2500px;
+	perspective: 2500px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.book_spine li:last-child {
+	background-image: url("../img/espiral.png");
+	background-size: 80%;
+	background-position: 45% 25%;
+}
+}
